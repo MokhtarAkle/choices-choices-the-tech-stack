@@ -1,0 +1,199 @@
+.main {
+  width: fit-content;
+  height: 100%;
+  margin: auto;
+  padding: var(--unit-default);
+  background-color: var(--color-accent-75);
+}
+
+.section {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1;
+  gap: var(--unit-default);
+  margin: auto;
+  margin-bottom: var(--unit-default);
+}
+
+/* David overzichtspagina */
+.card_article {
+  width: 20rem;
+  border-radius: 1.25rem;
+  background-color: var(--color-secundary);
+  overflow: hidden;
+  border: 1px solid;
+  margin-bottom: 0;
+}
+
+.card_article:hover .card_image_body {
+  z-index: 10;
+  transition: ease-in-out;
+}
+
+.card_head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_label {
+  margin-top: 10px;
+}
+
+.card_label span {
+  margin-left: 5px;
+}
+
+.card_head .card_date {
+  font-size: 86%;
+  font-variant-caps: all-small-caps;
+}
+
+.card_image_body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  padding: 30px;
+  color: white;
+}
+
+.card_image_body h3 {
+  margin-bottom: 5px;
+}
+
+.card_image_body p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-height: 20px;
+}
+
+/* Card Image */
+.card_image {
+  position: relative;
+  margin-bottom: -0.75rem;
+  height: 260px;
+}
+
+.card_img {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+  object-fit: cover;
+}
+
+.card_data {
+  background-color: #fff;
+  transition: 0.3s;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 10;
+  padding-bottom: 80px;
+  border-top: 1px solid;
+  height: 280px;
+}
+
+.card_data p {
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+
+.card_data h2 {
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.card_data h3 {
+  position: absolute;
+  font-weight: 500;
+  bottom: 82px;
+}
+
+.card_data h3 span {
+  font-weight: 600;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: var(--color-blue);
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  bottom: 25px;
+  position: absolute;
+  transition: var(--animation-default) ease-in-out;
+}
+
+.button:hover {
+  color: white;
+  background-color: black;
+}
+/* Einde david overzichtspagina */
+
+.searchbar {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  margin-bottom: var(--unit-default);
+  height: auto;
+  display: block;
+  padding: 0;
+}
+
+.searchbar form {
+  display: flex;
+  flex-direction: row;
+  gap: var(--unit-small);
+  width: 100%;
+  background-color: var(--color-secundary);
+  border-radius: var(--unit-small);
+  padding: var(--unit-small);
+  position: relative;
+}
+
+.searchbar input {
+  width: inherit;
+  border-radius: var(--unit-micro);
+  border: unset;
+  padding-left: var(--unit-small);
+}
+
+.searchbar figure {
+  display: flex;
+  align-items: center;
+  gap: var(--unit-small);
+}
+
+.searchbar button svg {
+  fill: var(--color-accent-75);
+  transition: var(--animation-default);
+}
+
+.searchbar button:is(:hover, :focus) svg {
+  fill: var(--color-blue);
+}
+
+@media (min-width: 42rem) {
+  .section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 64rem) {
+  .section {
+    width: fit-content;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
